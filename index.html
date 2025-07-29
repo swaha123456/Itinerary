@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-
     <main class="container">
         <!-- Hero Section -->
         <section class="hero-section">
-            <div class="main-image-wrapper">
-                <img src="/image/Card.png" alt="Camels in the desert with Dubai skyline" class="main-image">
-            </div>
-            <div class="grid-images-container">
-                <img src="/image/download (2) 1.png" alt="Dubai Marina skyline" class="grid-image-top">
-                <div class="grid-images-bottom">
-                    <img src="/image/Best Places to Visit in Dubai at Night - Arzo Travels 1.png" alt="Burj Khalifa at sunset" class="grid-image-bottom-left">
-                    <img src="/image/Dubai Canal 1.png" alt="Dubai Eye at sunset" class="grid-image-bottom-right">
+            <!-- Desktop Images (4 images) - Hidden on tablet/mobile -->
+            <div class="desktop-images">
+                <div class="main-image-wrapper">
+                    <img src="/image/Card.png" alt="Camels in the desert with Dubai skyline" class="main-image">
                 </div>
+                <div class="grid-images-container">
+                    <img src="/image/download (2) 1.png" alt="Dubai Marina skyline" class="grid-image-top">
+                    <div class="grid-images-bottom">
+                        <img src="/image/Best Places to Visit in Dubai at Night - Arzo Travels 1.png"
+                            alt="Burj Khalifa at sunset" class="grid-image-bottom-left">
+                        <img src="/image/Dubai Canal 1.png" alt="Dubai Eye at sunset" class="grid-image-bottom-right">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile/Tablet Single Image - Hidden on desktop -->
+            <div class="mobile-tablet-image">
+                <img src="image/Frame 1.png" alt="Dubai mobile view" class="single-image">
             </div>
         </section>
 
@@ -32,37 +38,78 @@
                 <h1 class="title">DUBAI – THE OASIS OF LUXURY</h1>
                 <div class="rating">
                     <span class="stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-star">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-star">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-star">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-star">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-star">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
                     </span>
                     <span class="rating-text">4.8 (266)</span>
                     <span class="booked-text">300+ booked</span>
                 </div>
-
                 <p class="description">
-                    Spread 4 nights and 5 days discovering a city that blends timeless Arabian charm with modern brilliance.
-                    From iconic landmarks and thrilling adventures to rich cultural experiences and bustling souks, Dubai is
+                    Spread 4 nights and 5 days discovering a city that blends timeless Arabian charm with modern
+                    brilliance.
+                    From iconic landmarks and thrilling adventures to rich cultural experiences and bustling souks,
+                    Dubai is
                     an experience like no other.
                 </p>
-
                 <div class="info-grid">
                     <div class="info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
                         <span>Dubai, UAE</span>
                     </div>
                     <div class="info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clock">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
                         <span>5 Days, 4 Nights</span>
                     </div>
                     <div class="info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        <span>$1,840.00 per person</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-indian-rupee">
+                            <path d="M6 3h12" />
+                            <path d="M6 8h12" />
+                            <path d="M9 13h3a4 4 0 0 0 0-8" />
+                            <path d="M9 13l6 8" />
+                        </svg>
+                        <span>RS. 1,840.00 per person</span>
                     </div>
                 </div>
-
                 <!-- Itinerary -->
                 <div class="itinerary-section">
                     <h2 class="section-title">ITINERARY</h2>
@@ -70,7 +117,6 @@
                         <!-- Itinerary items will be populated by JavaScript -->
                     </div>
                 </div>
-
                 <!-- Highlights -->
                 <div class="highlights-section">
                     <h2 class="section-title">HIGHLIGHTS</h2>
@@ -83,7 +129,6 @@
                         <li>Discover the charm of the Old Dubai and Palm Jumeirah</li>
                     </ul>
                 </div>
-
                 <!-- Included -->
                 <div class="included-section">
                     <h2 class="section-title">INCLUDED</h2>
@@ -101,102 +146,147 @@
                         <li>Lunch & Dinner (select as per itinerary)</li>
                     </ul>
                 </div>
+                <!-- Excluded -->
+                <div class="excluded-section">
+                    <h2 class="section-title">EXCLUDED</h2>
+                    <ul class="list-items">
+                        <li>International and domestic flights (can be arranged)</li>
+                        <li>Visa fees and processing charges</li>
+                        <li>TCS (Tax Collected at Source) as per government norms</li>
+                        <li>City/hotel taxes and resort fees</li>
+                        <li>Meals not mentioned in the itinerary</li>
+                        <li>Personal expenses (shopping, spa, laundry)</li>
+                        <li>Tips and gratuities to guides and drivers</li>
+                        <li>Premium travel insurance (recommended)</li>
+                        <li>Extra activities not mentioned in inclusions</li>
+                        <li>Room service and mini-bar charges</li>
+                        <li>Photography charges at monuments</li>
+                        <li>Any services not specifically mentioned in inclusions</li>
+                    </ul>
+                </div>
+                <!-- Optional Add Ons -->
+                <div class="optional-addons-section">
+                    <h2 class="section-title">OPTIONAL ADD ONS</h2>
+                    <ul class="list-items">
+                        <li>Preferred airline bookings with seat selection (from ₹5,000)</li>
+                        <li>Premium hotel upgrades to luxury suites (from ₹8,000/night)</li>
+                        <li>Private tours with dedicated guide (from ₹12,000/day)</li>
+                        <li>Special experiences (spa, yacht, helicopter) – on request</li>
+                        <li>Visa fast-track processing (additional ₹2,000)</li>
+                        <li>Comprehensive travel insurance (₹1,500–3,000)</li>
+                        <li>Forex services with competitive rates</li>
+                        <li>Occasion planning (honeymoon, anniversary, proposal)</li>
+                        <li>Professional photography/videography services</li>
+                        <li>Airport lounge access and fast-track immigration</li>
+                        <li>Extended stay options at discounted rates</li>
+                        <li>Local SIM cards and portable WiFi devices</li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- Right Column - Booking Form -->
+            <!-- Right Column - New Booking Form -->
             <div class="booking-column">
-                <div class="booking-card">
-                    <div class="booking-header">
-                        <h3 class="booking-title">From <span class="price">$1,200</span></h3>
+                <div class="new-booking-card">
+                    <div class="expert-header">
+                        <div class="expert-text">
+                            <h3>Customise your trip with someone who has been to Dubai - UAE</h3>
+                        </div>
                     </div>
-                    <div class="booking-content">
-                        <div class="form-group">
-                            <label for="dates">Dates</label>
-                            <input type="text" id="dates" placeholder="February 25 - March 14">
+                    <form class="expert-form">
+                        <div class="form-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="field-icon">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <input type="text" placeholder="Full name" class="form-input">
                         </div>
-                        <div class="form-group">
-                            <label for="time">Time</label>
-                            <input type="text" id="time" placeholder="Choose time">
+                        <div class="form-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="field-icon">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <input type="text" placeholder="WhatsApp Phone no." class="form-input">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="adults">Adults (10+ years)</label>
-                                <input type="number" id="adults" value="2">
-                            </div>
-                            <div class="form-group">
-                                <label for="children">Youth (10-17 years)</label>
-                                <input type="number" id="children" value="0">
-                            </div>
+                        <div class="form-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="field-icon">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            <input type="text" placeholder="No. of travellers" class="form-input">
                         </div>
-                        <div class="extra-options">
-                            <h3 class="extra-title">Add Extra</h3>
-                            <div class="extra-item">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" id="service-per-person">
-                                    <label for="service-per-person">Add Service per person</label>
-                                </div>
-                                <span class="extra-price">$40</span>
-                            </div>
-                            <div class="extra-item">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" id="service-per-booking">
-                                    <label for="service-per-booking">Add Service per booking</label>
-                                </div>
-                                <span class="extra-price">$40</span>
-                            </div>
+                        <div class="form-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="field-icon">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                <line x1="16" x2="16" y1="2" y2="6" />
+                                <line x1="8" x2="8" y1="2" y2="6" />
+                                <line x1="3" x2="21" y1="10" y2="10" />
+                            </svg>
+                            <input type="text" placeholder="Dates of travel" class="form-input">
                         </div>
-                        <div class="total-section">
-                            <span>Total</span>
-                            <span>$1,330.00</span>
+                        <div class="price-section">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-amount">RS. 1,840/- <span class="price-per">per person</span></span>
                         </div>
-                        <button class="book-now-button">Book Now</button>
-                    </div>
+                        <button type="submit" class="plan-button">PLAN WITH AN EXPERT</button>
+                    </form>
                 </div>
             </div>
         </section>
-
         <!-- You Might Also Like Section -->
         <section class="you-might-also-like-section">
             <h2 class="section-title">YOU MIGHT ALSO LIKE...</h2>
             <div class="scroll-container">
                 <div class="card-list">
                     <div class="travel-card">
-                        <img src="/image/image (8).png" alt="Centipede Tour - Guided Arizona Desert Tour" class="card-image">
+                        <img src="/image/image (8).png" alt="Centipede Tour - Guided Arizona Desert Tour"
+                            class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Centipede Tour - Guided Arizona Desert Tour</h3>
                             <div class="card-details">
                                 <span>4 days</span>
-                                <span class="card-price">$169.25</span>
+                                <span class="card-price">₹169.25</span>
                             </div>
                         </div>
                     </div>
                     <div class="travel-card">
-                        <img src="/image/div.tourCard__image (1).png" alt="Malakula and Tanna Islands - Vanuatu Adventure" class="card-image">
+                        <img src="/image/div.tourCard__image (1).png"
+                            alt="Malakula and Tanna Islands - Vanuatu Adventure" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Malakula and Tanna Islands - Vanuatu Adventure</h3>
                             <div class="card-details">
                                 <span>4 days</span>
-                                <span class="card-price">$225</span>
+                                <span class="card-price">₹225</span>
                             </div>
                         </div>
                     </div>
                     <div class="travel-card">
-                        <img src="/image/div.tourCard__image (2).png" alt="Westminster Walking Tour & Westminster Abbey Entry" class="card-image">
+                        <img src="/image/div.tourCard__image (2).png"
+                            alt="Westminster Walking Tour & Westminster Abbey Entry" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Westminster Walking Tour & Westminster Abbey Entry</h3>
                             <div class="card-details">
                                 <span>4 days</span>
-                                <span class="card-price">$843</span>
+                                <span class="card-price">₹843</span>
                             </div>
                         </div>
                     </div>
                     <div class="travel-card">
-                        <img src="/image/div.tourCard__image.png" alt="All Inclusive Ultimate Circle Island Tour with Lunch" class="card-image">
+                        <img src="/image/div.tourCard__image.png"
+                            alt="All Inclusive Ultimate Circle Island Tour with Lunch" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">All Inclusive Ultimate Circle Island Tour with Lunch</h3>
                             <div class="card-details">
                                 <span>4 days</span>
-                                <span class="card-price">$275</span>
+                                <span class="card-price">₹275</span>
                             </div>
                         </div>
                     </div>
@@ -206,16 +296,48 @@
                             <h3 class="card-title">Another Great Tour</h3>
                             <div class="card-details">
                                 <span>3 days</span>
-                                <span class="card-price">$199</span>
+                                <span class="card-price">₹199</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Booking Policy Section -->
+        <section class="booking-policy-section">
+            <h2 class="section-title">BOOKING POLICY</h2>
+            <div class="policy-grid">
+                <div class="policy-column">
+                    <div class="policy-item">
+                        <h4>15 Day Money Back Guarantee</h4>
+                        <p>Full refund if cancelled within 15 days of booking</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4>Free Cancellation</h4>
+                        <p>Cancel up to 48 hours before departure without penalty</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4>Instant Confirmation</h4>
+                        <p>Receive booking confirmation immediately after payment</p>
+                    </div>
+                </div>
+                <div class="policy-column">
+                    <div class="policy-item">
+                        <h4>24/7 Customer Support</h4>
+                        <p>Round-the-clock assistance for all your travel needs</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4>Flexible Date Changes</h4>
+                        <p>Modify travel dates subject to availability and fare difference</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4>Secure Payment</h4>
+                        <p>All transactions are encrypted and completely secure</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
-

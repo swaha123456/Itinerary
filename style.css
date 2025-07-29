@@ -1,4 +1,3 @@
-
 /* Basic Reset & Body Styles */
 * {
   box-sizing: border-box; /* Apply border-box globally */
@@ -20,8 +19,6 @@ body {
   padding: 2rem 1rem; /* Equivalent to px-4 py-8 */
 }
 
-
-
 /* Hero Section */
 .hero-section {
   display: grid;
@@ -31,12 +28,42 @@ body {
   overflow: hidden; /* Crucial for complex border-radius */
 }
 
+/* Desktop Images - Show only on desktop */
+.desktop-images {
+  display: none; /* Hidden by default */
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
 @media (min-width: 1024px) {
-  /* lg breakpoint */
-  .hero-section {
-    grid-template-columns: 2fr 1fr; /* Main image 2/3, right column 1/3 */
-    align-items: stretch; /* Ensure both columns stretch to fill height */
+  .desktop-images {
+    display: grid; /* Show on desktop */
   }
+
+  .hero-section {
+    grid-template-columns: 1fr; /* Single column to contain desktop-images */
+  }
+}
+
+/* Mobile/Tablet Single Image - Show only on mobile/tablet */
+.mobile-tablet-image {
+  display: block; /* Show by default */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .mobile-tablet-image {
+    display: none; /* Hide on desktop */
+  }
+}
+
+.single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-image-wrapper {
@@ -287,178 +314,6 @@ body {
   margin-bottom: 0.5rem; /* space-y-2 */
 }
 
-/* Right Column - Booking Form */
-.booking-column {
-  /* Default for smaller screens */
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1024px) {
-  /* lg breakpoint */
-  .booking-column {
-    max-width: 300px; /* Adjusted width for desktop to prevent overflow */
-    margin-left: 0;
-    margin-right: 0;
-    position: sticky; /* Make it sticky */
-    top: 2rem; /* Stick to 2rem from the top of the viewport */
-    align-self: start; /* Align to the top of its grid cell */
-    z-index: 100; /* Ensure it stays on top of other content */
-  }
-}
-
-.booking-card {
-  background-color: #ffffff;
-  border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* shadow-lg */
-}
-
-.booking-header {
-  padding: 1rem; /* p-4 */
-  border-bottom: 1px solid #e5e7eb; /* border-gray-200 */
-}
-
-.booking-title {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 600; /* font-semibold */
-  color: #1f2937; /* text-gray-800 */
-}
-
-.booking-title .price {
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 700; /* font-bold */
-  color: #ea580c; /* text-orange-600 */
-}
-
-.booking-content {
-  padding: 1rem; /* p-4 */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem; /* space-y-6 */
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-size: 0.875rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-  color: #374151; /* text-gray-700 */
-  margin-bottom: 0.25rem;
-}
-
-.form-group input[type="text"],
-.form-group input[type="number"] {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem; /* px-3 py-2 */
-  border: 1px solid #d1d5db; /* border-gray-300 */
-  border-radius: 0.375rem; /* rounded-md */
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
-  outline: none;
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="number"]:focus {
-  border-color: #3b82f6; /* focus:border-blue-500 */
-  box-shadow: 0 0 0 1px #3b82f6; /* focus:ring-blue-500 */
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem; /* gap-4 */
-}
-
-.extra-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem; /* space-y-3 */
-}
-
-.extra-title {
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 600; /* font-semibold */
-  color: #1f2937; /* text-gray-800 */
-}
-
-.extra-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.checkbox-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* space-x-2 */
-}
-
-.checkbox-wrapper input[type="checkbox"] {
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: #fff;
-  cursor: pointer;
-  position: relative;
-}
-
-.checkbox-wrapper input[type="checkbox"]:checked {
-  background-color: #f97316; /* orange-500 */
-  border-color: #f97316;
-}
-
-.checkbox-wrapper input[type="checkbox"]:checked::before {
-  content: "";
-  display: block;
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: #fff;
-  border-radius: 0.125rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.extra-item .extra-price {
-  color: #4b5563; /* text-gray-600 */
-}
-
-.total-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 700; /* font-bold */
-  color: #1f2937; /* text-gray-800 */
-  padding-top: 1rem; /* pt-4 */
-  border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
-}
-
-.book-now-button {
-  width: 100%;
-  background-color: #f97316; /* bg-orange-500 */
-  color: #ffffff; /* text-white */
-  padding: 0.75rem 1rem; /* py-3 px-4 */
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 600; /* font-semibold */
-  border-radius: 0.375rem; /* rounded-md */
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.book-now-button:hover {
-  background-color: #ea580c; /* hover:bg-orange-600 */
-}
-
 /* You Might Also Like Section */
 .you-might-also-like-section {
   margin-top: 3rem; /* mt-12 */
@@ -548,20 +403,8 @@ body {
   .hero-section {
     grid-template-columns: 1fr;
   }
-  .main-image-wrapper {
-    height: 18rem; /* Adjust height for smaller screens */
-  }
-  .grid-images-container {
-    height: auto; /* Allow height to adjust on smaller screens */
-    grid-template-rows: auto auto;
-  }
-  .grid-images-bottom {
-    grid-template-columns: 1fr; /* Stack bottom images vertically on small screens */
-  }
-  .grid-image-top,
-  .grid-image-bottom-left,
-  .grid-image-bottom-right {
-    border-radius: 0.5rem; /* General rounded corners for mobile */
+  .mobile-tablet-image {
+    height: 250px; /* Smaller height for mobile */
   }
   .details-column .title {
     font-size: 1.75rem;
@@ -585,22 +428,213 @@ body {
   .hero-section {
     grid-template-columns: 1fr; /* Still single column for hero on md */
   }
-  .main-image-wrapper {
-    height: 20rem;
-  }
-  .grid-images-container {
-    height: auto; /* Allow height to adjust on md screens */
-    grid-template-rows: auto auto;
-  }
-  .grid-images-bottom {
-    grid-template-columns: repeat(2, 1fr); /* Keep side-by-side on md */
-  }
-  .grid-image-top,
-  .grid-image-bottom-left,
-  .grid-image-bottom-right {
-    border-radius: 0.5rem; /* General rounded corners for mobile */
+  .mobile-tablet-image {
+    height: 350px; /* Medium height for tablet */
   }
   .details-column .title {
     font-size: 2rem;
+  }
+}
+
+@media (width: 1024px) {
+  /* lg breakpoint */
+  .desktop-images {
+    grid-template-columns: 2fr 1fr; /* Main image 2/3, right column 1/3 */
+  }
+
+  .main-image-wrapper {
+    height: 40rem; /* Taller main image */
+  }
+
+  .grid-images-container {
+    height: 40rem; /* Match height of main image wrapper exactly */
+  }
+
+  .grid-image-top {
+    height: 18rem; /* Adjust top image height */
+  }
+
+  .grid-images-bottom {
+    grid-template-columns: 1fr 1fr; /* Two images side-by-side */
+    height: 22rem; /* Make bottom section taller */
+    gap: 0.5rem; /* Add small gap between bottom images */
+  }
+
+  .grid-images-bottom .grid-image-bottom-left {
+    border-radius: 0 0 0 0; /* Bottom-left rounded */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Maintain aspect ratio while filling */
+  }
+
+  .grid-images-bottom .grid-image-bottom-right {
+    border-radius: 0 0 1rem 0; /* Bottom-right rounded */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Maintain aspect ratio while filling */
+  }
+}
+
+/* New Booking Form Styles */
+.new-booking-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.expert-header {
+  margin-bottom: 24px;
+}
+.expert-images {
+  display: flex;
+  margin-bottom: 16px;
+  gap: -8px;
+}
+.expert-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: -8px;
+}
+.expert-img:first-child {
+  margin-left: 0;
+}
+.expert-text h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+.expert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.field-icon {
+  color: #666;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.form-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+.form-input::placeholder {
+  color: #999;
+}
+.price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px 0;
+}
+.price-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+.price-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #df6108;
+}
+.price-per {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+.plan-button {
+  background-color: #f97316; /* bg-orange-500 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.plan-button:hover {
+  background-color: #f97316; /* orange-500 */
+  border-color: #f97316;
+}
+
+/* Booking Policy Styles */
+.booking-policy-section {
+  margin: 48px 0;
+  padding: 32px 0;
+}
+.policy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+.policy-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.policy-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+.policy-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .policy-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .expert-images {
+    justify-content: center;
+  }
+
+  .expert-text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg breakpoint */
+  .booking-column {
+    max-width: 600px; /* Adjusted width for desktop to prevent overflow */
+    margin-left: 0;
+    margin-right: 0;
+    position: sticky; /* Make it sticky */
+    top: 2rem; /* Stick to 2rem from the top of the viewport */
+    align-self: start; /* Align to the top of its grid cell */
+    z-index: 100; /* Ensure it stays on top of other content */
+  
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .single-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
